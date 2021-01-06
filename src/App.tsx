@@ -1,11 +1,15 @@
 import React from 'react';
 import './App.css';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import HomePageView from './views/HomePageView';
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <p>Hellooooo!!!</p>
-    </div>
+    <Router>
+      <Switch>
+        <Route path="/" exact component={HomePageView} />
+      </Switch>
+    </Router>
   );
 }
 
