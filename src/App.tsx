@@ -7,8 +7,8 @@ import Navbar from './components/Navbar';
 const App: React.FC = () => {
   return (
     <Router>
+      <Navbar />
       <Switch>
-        <Navbar />
         <Route path="/" exact component={HomePageView} />
       </Switch>
     </Router>
