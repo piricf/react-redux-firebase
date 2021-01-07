@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from "react-router-dom"
+import "../css/CarGroup.css"
 
 type Props = OwnProps;
 
@@ -23,9 +24,9 @@ const CarGroup: React.FC<Props> = ({
     return (
         <div>
             <div className="container">
-            <div className="row home__hero-row">
+            <div className="row home-row">
                <div className="col">
-                    <div className="home__hero-text-wrapper">
+                    <div className="home-text-wrapper">
                         <div className="top-line">{topline}</div>
                         <h1 className="heading">{headline}</h1>    
                         <p className="description">{description}</p>
@@ -35,8 +36,8 @@ const CarGroup: React.FC<Props> = ({
                     </div>   
                 </div> 
                 <div className="col">
-                    <div className="home__hero-img-wrapper">
-                       <img src={img} alt={alt} className="home__hero-img" />
+                    <div className="home-img-wrapper">
+                       <img src={img} alt={alt} className="home-img" />
                     </div>
                 </div>
             </div>
