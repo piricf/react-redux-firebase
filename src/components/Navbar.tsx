@@ -3,6 +3,7 @@ import { Link } from "react-router-dom"
 import { AiOutlineCar } from "react-icons/ai";
 import { FaBars, FaTimes } from "react-icons/fa";
 import "../css/Navbar.css"
+import Button from "./Button";
 
 const Navbar: React.FC = () => {
    const [click, setClick] = useState(false)
@@ -59,7 +60,7 @@ const Navbar: React.FC = () => {
                         </li>
                         <li className="nav-btn">
                             <Link to="/sign-up" className="btn-link">
-                                <button  onClick={closeMobileMenu} >Sign Up</button>
+                                <Button buttonSize="medium" buttonStyle="btn-outline" buttonColor="primary"  onClick={closeMobileMenu} >Sign Up</Button>
                                 {button}
                             </Link>
                         </li>
