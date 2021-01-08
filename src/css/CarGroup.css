@@ -48,6 +48,11 @@
   color: #1c2237;
 }
 
+.home-btn-link {
+  position: relative;
+  top: 50px;
+}
+
 .home-img-wrapper {
   max-width: 555px;
 }

@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from "react-router-dom"
+import Button from "./Button"
 import "../css/CarGroup.css"
 
 type Props = OwnProps;
@@ -30,8 +31,8 @@ const CarGroup: React.FC<Props> = ({
                         <div className="top-line">{topline}</div>
                         <h1 className="heading">{headline}</h1>    
                         <p className="description">{description}</p>
-                        <Link to="/sign-up">
-                            <button>{buttonLabel}</button>
+                        <Link to="/sign-up" className="home-btn-link">
+                            <Button buttonSize="medium" buttonStyle="btn-outline" buttonColor="red" >{buttonLabel}</Button>
                         </Link>
                     </div>   
                 </div> 
