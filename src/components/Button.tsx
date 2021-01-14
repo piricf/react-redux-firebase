@@ -8,6 +8,7 @@ interface buttonProps {
     buttonStyle: string,
     buttonSize: string,
     buttonColor: string,
+    onClick?: any,
 }
 
 const STYLES = ["btn--primary", "btn-outline"];
@@ -21,6 +22,7 @@ const Button: React.FC<Props> = ({
     buttonStyle,
     buttonSize,
     buttonColor,
+    onClick
 }) => {
     const checkButtonStyle = STYLES.includes(buttonStyle)
     ? buttonStyle
@@ -32,6 +34,7 @@ const Button: React.FC<Props> = ({
     return (
         <button
             className={`btn ${checkButtonStyle} ${checkButtonSize} ${checkButtonColor}`}
+            onClick={onClick}
         >
             {children}
         </button>

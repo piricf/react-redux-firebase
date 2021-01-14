@@ -60,7 +60,7 @@ const Navbar: React.FC = () => {
                         </li>
                         <li className="nav-btn">
                             <Link to="/sign-up" className="btn-link" onClick={closeMobileMenu}>
-                                <Button buttonSize="medium" buttonStyle="btn-outline" buttonColor="primary"   >Sign Up</Button>
+                                <Button buttonSize="medium" buttonStyle="btn-outline" buttonColor="primary">Sign Up</Button>
                                 {button}
                             </Link>
                         </li>
