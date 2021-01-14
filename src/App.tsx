@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import HomePageView from './views/HomePageView';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import AudiPageView from "./views/AudiPageView"
 
 const App: React.FC = () => {
   return (
@@ -11,6 +12,7 @@ const App: React.FC = () => {
       <Navbar />
       <Switch>
         <Route path="/" exact component={HomePageView} />
+        <Route path="/audi" component={AudiPageView} />
       </Switch>
       <Footer />
     </Router>

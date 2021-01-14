@@ -32,7 +32,7 @@ const CarGroup: React.FC<Props> = ({
                         <h1 className="heading">{headline}</h1>    
                         <p className="description">{description}</p>
                         <Link to="/sign-up" className="home-btn-link">
-                            <Button buttonSize="medium" buttonStyle="btn-outline" buttonColor="red" >{buttonLabel}</Button>
+                            <Button buttonSize="medium" buttonStyle="btn-outline" buttonColor="red">{buttonLabel}</Button>
                         </Link>
                     </div>   
                 </div> 
