@@ -1,4 +1,5 @@
 import React, {useState} from "react"
+import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 import "../css/ImageSlider.css"
 
 type Props =  ImageSliderItem
@@ -30,10 +31,10 @@ const ImageSlider: React.FC<Props> = ({
                 )
             })}
             <button id="goLeft" onClick={goLeft}>
-                <i className="fas fa-chevron-left">left</i>
+                <i className="fas fa-chevron-left"><FaAngleLeft /></i>
             </button>
             <button id="goRight" onClick={goRight}>
-                <i className="fas fa-chevron-right"></i> 
+                <i className="fas fa-chevron-right"><FaAngleRight /></i> 
             </button>
         </div>
     )
