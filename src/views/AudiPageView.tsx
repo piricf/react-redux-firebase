@@ -3,6 +3,7 @@ import ImageSlider from "../components/ImageSlider"
 import audiLogo from "../assets/audiLogo.jpg"
 import Button from "../components/Button"
 import "../css/VehiclePageView.css"
+import CarModels from "../components/CarModels"
 
 let imageSrc: string[] = [
     require("../assets/audiSlider1.jpg").default,
@@ -11,7 +12,16 @@ let imageSrc: string[] = [
     require("../assets/audiSlider4.jpg").default
 ]
 
-const AudiPageView: React.FC = () => {
+type Props = CarModelsProps;
+
+interface CarModelsProps {
+    about: string,
+    specifications: string,
+    open?: boolean
+}
+
+
+const AudiPageView: React.FC<Props> = ({ about, specifications}) => {
     const [showInfo, setShowInfo] = useState(false)
 
     const toggleInfo = () => {
@@ -42,7 +52,19 @@ const AudiPageView: React.FC = () => {
                             the Technical Development (TE) department. This close connection
                             guarantees the technology transfer between motorsport and series
                             production. Traditionally, this is a decisive reason for Audi
-                            taking on top-level motorsport.The specified fuel consumption and emission data have been determind according to the measurement procedures prescribed by law. Since 1st September 2017, certain new vehicles are already being type-approved according to the Worldwide Harmonized Light Vehicles Test Procedure (WLTP), a more realistic test procedure for measuring fuel consumption and CO2 emissions. Starting on September 1st 2018, the New European Driving Cycle (NEDC) will be replaced by the WLTP in stages. Owing to the more realistic test conditions, the fuel consumption and CO2 emissions measured according to the WLTP will, in many cases, be higher than those measured according to the NEDC. Therefore, the usage of CO2 emission values measured according to WLTP for vehicle taxation from 1st September 2018 on can cause changes in this regards as well.
+                            taking on top-level motorsport.The specified fuel consumption and
+                            emission data have been determind according to the measurement 
+                            procedures prescribed by law. Since 1st September 2017, certain 
+                            new vehicles are already being type-approved according to the Worldwide
+                            Harmonized Light Vehicles Test Procedure (WLTP), a more realistic 
+                            test procedure for measuring fuel consumption and CO2 emissions. 
+                            Starting on September 1st 2018, the New European Driving Cycle (NEDC)
+                            will be replaced by the WLTP in stages. Owing to the more realistic test
+                            conditions, the fuel consumption and CO2 emissions measured according 
+                            to the WLTP will, in many cases, be higher than those measured according
+                            to the NEDC. Therefore, the usage of CO2 emission values measured
+                            according to WLTP for vehicle taxation from 1st September 2018
+                            on can cause changes in this regards as well.
                         </p>
                     </div>
                 ): null}
@@ -51,6 +73,9 @@ const AudiPageView: React.FC = () => {
             <ImageSlider 
                 imageSrc={imageSrc} 
             />
+            </div>
+            <div>
+                <CarModels  about={about} specifications={specifications}/>
             </div>
         </div>
     )

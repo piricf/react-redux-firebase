@@ -3,9 +3,9 @@ import { Link } from "react-router-dom"
 import Button from "./Button"
 import "../css/CarGroup.css"
 
-type Props = OwnProps;
+type Props = CarGroupProps;
 
-interface OwnProps {
+interface CarGroupProps {
     topline: string,
     headline: string,
     description: string,
